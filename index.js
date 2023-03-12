@@ -10,14 +10,14 @@ const wage = 300
 const hours = 8
 const days = 20
 const tax = 15
-const grossWage = salary()
-const taxedWage = taxed()
+const grossWage = salary(wage, hours, days)
+const taxedWage = taxed(grossWage, tax)
 
 
 document.body.innerHTML = `
     <p> Wage per hour: ${wage} CZK </p>
-    <p> Hours per day: ${hours} </p>
-    <p> Day per month: ${days} </p>
+    <p> Hours per day: ${hours} h </p>
+    <p> Days per month: ${days} days </p>
     <p> Tax: ${tax} % </p>
     <p> Gross wage before taxation: ${grossWage} </p>
     <p> Taxed wage: ${taxedWage} </p>
